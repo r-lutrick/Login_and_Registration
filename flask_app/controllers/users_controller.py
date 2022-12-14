@@ -32,7 +32,7 @@ def user_new():
         'first_name': request.form['first_name'],
         'last_name': request.form['last_name'],
         'email': request.form['email'],
-        'password': request.form['password'],
+        'password': request.form['password']
     }
     if not User.validate(data):
         return redirect('/')
