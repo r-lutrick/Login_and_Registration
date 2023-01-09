@@ -34,7 +34,7 @@ def user_new():
         'email': request.form['email'],
         'password': request.form['password'],
     }
-    if not User.validate(data):
+    if not User.validate(request.form):
         return redirect('/')
     if not data['password'] == request.form['confirm_password']:
         flash("Passwords must match", "reg")
